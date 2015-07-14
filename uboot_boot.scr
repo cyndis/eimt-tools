@@ -1,5 +1,5 @@
-setenv bootargs console=ttyS0,115200n8 earlyprintk initrd=${ramdisk_addr_r},0x800000 root=/dev/ram0
-     
+setenv bootargs console=ttyS0,115200n8 earlyprintk initrd=${ramdisk_addr_r},0x800000 root=/dev/ram0 eimt.nfsaddr=IP:PATH
+
 tftp ${kernel_addr_r} zImage
 tftp ${fdt_addr_r} dt.dtb
 tftp ${ramdisk_addr_r} ramfs.img.gz
